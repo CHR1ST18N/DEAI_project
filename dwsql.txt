@@ -1,239 +1,195 @@
-CREATE TABLE DIM_Product (
-    product_number      INT PRIMARY KEY,
-    region              VARCHAR(45),
-    introduction_date   DATE,
-    production_code     INT,
-    margin              DECIMAL(10,2),
-    product_image       VARCHAR(100),
-    language            VARCHAR(10),
-    product_name        VARCHAR(100),
-    product_type_en     VARCHAR(45),
-    product_line_en     VARCHAR(45)
+
+CREATE TABLE DIM_age_group (
+    AGE_GROUP_CODE INT PRIMARY KEY,
+    UPPER_AGE INT,
+    LOWER_AGE INT
 );
 
-CREATE TABLE DIM_Inventory_Levels (
-    inventory_levels_code   INT PRIMARY KEY,
-    inventory_year          INT,
-    inventory_month         INT,
-    inventory_count         INT,
-    product_number          INT,
-    FOREIGN KEY (product_number) REFERENCES DIM_Product(product_number)
+CREATE TABLE DIM_customer_segment (
+    SEGMENT_CODE INT PRIMARY KEY,
+    LANGUAGE VARCHAR(10),
+    SEGMENT_NAME VARCHAR(45),
+    SEGMENT_DESCRIPTION VARCHAR(100)
 );
 
-CREATE TABLE DIM_Product_Forecast (
-    product_forecast_code   INT PRIMARY KEY,
-    year                    INT,
-    month                   INT,
-    expected_volume         INT,
-    product_number          INT,
-    FOREIGN KEY (product_number) REFERENCES DIM_Product(product_number)
+CREATE TABLE DIM_country (
+    COUNTRY_CODE INT PRIMARY KEY,
+    COUNTRY VARCHAR(45),
+    LANGUAGE VARCHAR(10),
+    CURRENCY VARCHAR(45),
+    FLAG_IMAGE VARCHAR(100),
+    TERRITORY_NAME_EN VARCHAR(45)
 );
 
-CREATE TABLE DIM_Month (
-    month_id    INT PRIMARY KEY,
-    monthnr     INT,
-    month       VARCHAR(20),
-    quarter     INT,
-    year        INT
+CREATE TABLE DIM_customer_headquarters (
+    CUSTOMER_CODE_HQ INT PRIMARY KEY,
+    CUSTOMER_NAME VARCHAR(100),
+    ADRESS1 VARCHAR(100),
+    ADRESS2 VARCHAR(100),
+    CITY VARCHAR(45),
+    REGION VARCHAR(45),
+    POSTAL_ZONE VARCHAR(45),
+    PHONE VARCHAR(45),
+    FAX VARCHAR(45),
+    COUNTRY INT,
+    SEGMENT_CODE INT,
+    FOREIGN KEY (COUNTRY) REFERENCES DIM_country(COUNTRY_CODE),
+    FOREIGN KEY (SEGMENT_CODE) REFERENCES DIM_customer_segment(SEGMENT_CODE)
 );
 
-CREATE TABLE DIM_Date (
-    date        DATE PRIMARY KEY,
-    day         INT,
-    month_id    INT,
-    FOREIGN KEY (month_id) REFERENCES DIM_Month(month_id)
+CREATE TABLE DIM_customer (
+    CUSTOMER_CODE INT PRIMARY KEY,
+    COMPANY_NAME VARCHAR(100),
+    CUSTOMER_TYPE_EN VARCHAR(100),
+    CUSTOMER_HEADQUARTERS INT,
+    FOREIGN KEY (CUSTOMER_HEADQUARTERS) REFERENCES DIM_customer_headquarters(CUSTOMER_CODE_HQ)
 );
 
-CREATE TABLE FACT_Sales_Target (
-    sales_target_code   INT PRIMARY KEY,
-    sales_year          INT,
-    sales_period        INT,
-    retailer_name       VARCHAR(100),
-    retailer_code       INT,
-    expected_volume     INT,
-    sales_target        DECIMAL(10,2),
-    sales_staff_code    INT,
-    product_number      INT,
-    FOREIGN KEY (product_number) REFERENCES DIM_Product(product_number)
+CREATE TABLE FACT_sales_demographic(
+    DEMOGRAPHIC_CODE INT PRIMARY KEY,
+    SALES_PERCENT INT,
+    CUSTOMER_HEADQUARTERS INT,
+    AGE_GROUP INT,
+    FOREIGN KEY (CUSTOMER_HEADQUARTERS) REFERENCES DIM_customer_headquarters(CUSTOMER_CODE_HQ),
+    FOREIGN KEY (AGE_GROUP) REFERENCES DIM_age_group(AGE_GROUP_CODE)
 );
 
-CREATE TABLE FACT_Returned_Item (
-    return_code         INT PRIMARY KEY,
-    return_date         DATE,
-    return_quantity     INT,
-    return_reason_en    VARCHAR(100),
-    order_details       INT
+CREATE TABLE DIM_product(
+    PRODUCT_NUMBER INT PRIMARY KEY,
+    DESCRIPTION VARCHAR(100),
+    INTRODUCTION_DATE DATE,
+    COST_CATEGORY VARCHAR(45),
+    MARGIN DECIMAL(10,2),
+    PRODUCT_IMG VARCHAR(45),
+    LANGUAGE VARCHAR(10),
+    PRODUCT_NAME VARCHAR(100),
+    PRODUCT_TYPE_EN VARCHAR(100),
+    PRODUCT_LINE_EN VARCHAR(100)
 );
 
-CREATE TABLE FACT_Order_Details (
-    order_detail_code   INT PRIMARY KEY,
-    quantity            INT,
-    unit_cost           DECIMAL(10,2),
-    unit_price          DECIMAL(10,2),
-    unit_revenue        DECIMAL(10,2),
-    unit_sale_price     DECIMAL(10,2),
-    order_header        INT,
-    product             INT,
-    FOREIGN KEY (product) REFERENCES DIM_Product(product_number)
+CREATE TABLE DIM_retailer_site(
+    RETAILER_SITE_CODE INT PRIMARY KEY,
+    RETAILER_CODE INT,
+    ADRESS1 VARCHAR(100),
+    ADRESS2 VARCHAR(100),
+    CITY VARCHAR(100),
+    REGION VARCHAR(100),
+    POSTAL_CODE VARCHAR(45),
+    ACTIVE_INDICATOR BOOLEAN,
+    COUNTRY INT,
+    CUSTOMER INT,
+    FOREIGN KEY (CUSTOMER) REFERENCES DIM_customer(CUSTOMER_CODE),
+    FOREIGN KEY (COUNTRY) REFERENCES DIM_country(COUNTRY_CODE)
 );
 
-CREATE TABLE FACT_Order_Header (
-    order_number            INT PRIMARY KEY,
-    retailer_name           VARCHAR(100),
-    retailer_contact_code   INT,
-    order_date              DATE,
-    order_method_en         VARCHAR(45),
-    retailer_site           INT,
-    sales_staff             INT,
-    sales_branch            INT
+CREATE TABLE DIM_sales_branch(
+    SALES_BRANCH_CODE INT PRIMARY KEY,
+    ADRESS1 VARCHAR(100),
+    ADRESS2 VARCHAR(100),
+    CITY VARCHAR(100),
+    REGION VARCHAR(100),
+    POSTAL_CODE VARCHAR(45),
+    COUNTRY INT,
+    FOREIGN KEY (COUNTRY) REFERENCES DIM_country(COUNTRY_CODE)
 );
 
-CREATE TABLE DIM_Retailer_Site (
-    retailer_site_code  INT PRIMARY KEY,
-    retailer_code       INT,
-    address1            VARCHAR(100),
-    address2            VARCHAR(100),
-    city                VARCHAR(100),
-    region              VARCHAR(100),
-    postal_zone         VARCHAR(45),
-    active_indicator    BOOLEAN,
-    customer            INT,
-    country             INT
+CREATE TABLE DIM_sales_staff(
+    SALES_STAFF_CODE INT PRIMARY KEY,
+    FIRST_NAME VARCHAR(45),
+    LAST_NAME VARCHAR(45),
+    POSITION_EN VARCHAR(100),
+    WORK_PHONE VARCHAR(45),
+    EXTENSION INT,
+    FAX VARCHAR(45),
+    DATE_HIRED DATE,
+    TRAINING_YEAR INT,
+    TRAINING_COURSE VARCHAR(100),
+    STATISFACTION_YEAR INT,
+    STATISFACTION_DESCRIPTION VARCHAR(100),
+    SALES_BRANCH INT,
+    MANAGER INT,
+    FOREIGN KEY (SALES_BRANCH) REFERENCES DIM_sales_branch(SALES_BRANCH_CODE),
+    FOREIGN KEY (MANAGER) REFERENCES DIM_sales_staff(SALES_STAFF_CODE)
 );
 
-CREATE TABLE DIM_Customer_Store (
-    customer_store_code INT PRIMARY KEY,
-    street              VARCHAR(100),
-    addition            VARCHAR(100),
-    city                VARCHAR(45),
-    state               VARCHAR(45),
-    zipcode             VARCHAR(45),
-    active_indicator    BOOLEAN,
-    customer            INT,
-    crm_country         INT
+CREATE TABLE FACT_order_header(
+    ORDER_NUMBER INT PRIMARY KEY,
+    RETAILER_NAME VARCHAR(100),
+    RETAILER_CONTACT_CODE INT,
+    ORDER_DATE DATE,
+    ORDER_METHOD_EN VARCHAR(100),
+    RETAILER_SITE INT,
+    SALES_STAFF INT,
+    SALES_BRANCH INT,
+    FOREIGN KEY (RETAILER_SITE) REFERENCES DIM_retailer_site(RETAILER_SITE_CODE),
+    FOREIGN KEY (SALES_STAFF) REFERENCES DIM_sales_staff(SALES_STAFF_CODE),
+    FOREIGN KEY (SALES_BRANCH) REFERENCES DIM_sales_branch(SALES_BRANCH_CODE)
 );
 
-CREATE TABLE DIM_Customer (
-    customer_code           INT PRIMARY KEY,
-    company_name            VARCHAR(45),
-    customer_type           INT,
-    customer_headquarters   INT
+CREATE TABLE FACT_order_details(
+    ORDER_DETAIL_CODE INT PRIMARY KEY,
+    QUANTITY INT,
+    UNIT_COST DECIMAL(10,2),
+    UNIT_REVENUE DECIMAL(10,2),
+    UNIT_PRICE DECIMAL(10,2),
+    UNIT_SALE_PRICE DECIMAL(10,2),
+    ORDER_HEADER INT,
+    PRODUCT INT,
+    FOREIGN KEY (ORDER_HEADER) REFERENCES FACT_order_header(ORDER_NUMBER),
+    FOREIGN KEY (PRODUCT) REFERENCES DIM_product(PRODUCT_NUMBER)
 );
 
-CREATE TABLE DIM_Customer_Segment (
-    segment_code            INT PRIMARY KEY,
-    language                VARCHAR(10),
-    segment_name            VARCHAR(45),
-    segment_description     VARCHAR(100)
+CREATE TABLE DIM_returned_item(
+    RETURN_CODE INT PRIMARY KEY,
+    RETURN_DATE DATE,
+    QUANTITY_CATEGORY VARCHAR(100),
+    RETURN_REASON_EN VARCHAR(100),
+    ORDER_DETAILS INT,
+    FOREIGN KEY (ORDER_DETAILS) REFERENCES FACT_order_details(ORDER_DETAIL_CODE)
 );
 
-CREATE TABLE DIM_Customer_Headquarters (
-    customer_code_hq    INT PRIMARY KEY,
-    customer_name       VARCHAR(100),
-    address1            VARCHAR(100),
-    address2            VARCHAR(100),
-    city                VARCHAR(45),
-    region              VARCHAR(45),
-    postal_zone         VARCHAR(45),
-    phone               VARCHAR(45),
-    fax                 VARCHAR(45),
-    flag_image          VARCHAR(100),
-    country             INT,
-    segment_code        INT,
-    customer_segment    INT
+CREATE TABLE DIM_inventory_level(
+    INVENTORY_LEVELS_CODE INT PRIMARY KEY,
+    INVENTORY_YEAR INT,
+    INVENTORY_MONTH INT,
+    INVENTORY_COUNT INT,
+    PRODUCT INT,
+    FOREIGN KEY(PRODUCT) REFERENCES DIM_product(PRODUCT_NUMBER)
 );
 
-CREATE TABLE DIM_Age_Group (
-    age_group_code  INT PRIMARY KEY,
-    upper_age       INT,
-    lower_age       INT
+CREATE TABLE DIM_product_forecast(
+    PRODUCT_FORECAST_CODE INT PRIMARY KEY,
+    YEAR INT,
+    MONTH INT,
+    EXPECTED_VOLUME INT,
+    PRODUCT INT,
+    FOREIGN KEY(PRODUCT) REFERENCES DIM_product(PRODUCT_NUMBER)
 );
 
-CREATE TABLE FACT_Sales_Demographic (
-    demographic_code        INT PRIMARY KEY,
-    sales_percent           INT,
-    customer_headquarters   INT,
-    age_group               INT,
-    FOREIGN KEY (customer_headquarters) REFERENCES DIM_Customer_Headquarters(customer_code_hq),
-    FOREIGN KEY (age_group)             REFERENCES DIM_Age_Group(age_group_code)
+CREATE TABLE FACT_sales_target(
+    SALES_TARGET_CODE INT PRIMARY KEY,
+    SALES_YEAR INT,
+    SALES_PERIOD INT,
+    RETAILER_NAME VARCHAR(100),
+    RETAILER_CODE INT,
+    SALES_TARGET DECIMAL(10,2),
+    SALES_STAFF INT,
+    PRODUCT INT,
+    FOREIGN KEY (SALES_STAFF) REFERENCES DIM_sales_staff(SALES_STAFF_CODE),
+    FOREIGN KEY (PRODUCT) REFERENCES DIM_product(PRODUCT_NUMBER)
 );
 
-CREATE TABLE DIM_Country (
-    country_code    INT PRIMARY KEY,
-    country         VARCHAR(100),
-    language        VARCHAR(10),
-    currency_name   VARCHAR(45)
+CREATE TABLE DIM_Month(
+    MONTH_ID INT PRIMARY KEY,
+    MONTHNR INT,
+    MONTH VARCHAR(45),
+    QUARTER INT,
+    YEAR INT
 );
 
-CREATE TABLE DIM_Country_CRM (
-    country_code        INT PRIMARY KEY,
-    country_en          VARCHAR(45),
-    flag_image          VARCHAR(100),
-    territory_name_en   VARCHAR(45)
-);
-
-CREATE TABLE DIM_Sales_Branch (
-    sales_branch_code   INT PRIMARY KEY,
-    address1            VARCHAR(100),
-    address2            VARCHAR(100),
-    city                VARCHAR(100),
-    region              VARCHAR(100),
-    postal_code         VARCHAR(45),
-    country             INT,
-    FOREIGN KEY (country) REFERENCES DIM_Country(country_code)
-);
-
-CREATE TABLE DIM_Sales_Staff (
-    sales_staff_code            INT PRIMARY KEY,
-    first_name                  VARCHAR(45),
-    last_name                   VARCHAR(45),
-    position_en                 VARCHAR(100),
-    work_phone                  VARCHAR(45),
-    extension                   INT,
-    fax                         VARCHAR(45),
-    email                       VARCHAR(100),
-    date_hired                  DATE,
-    training_course             VARCHAR(100),
-    satisfaction_year           INT,
-    satisfaction_description    VARCHAR(100),
-    sales_branch                INT,
-    manager                     INT,
-    FOREIGN KEY (sales_branch) REFERENCES DIM_Sales_Branch(sales_branch_code)
-);
-
-CREATE TABLE DIM_Sales_Office (
-    sales_office_code   INT PRIMARY KEY,
-    street              VARCHAR(100),
-    addition            VARCHAR(45),
-    city                VARCHAR(100),
-    region              VARCHAR(100),
-    zipcode             VARCHAR(45),
-    country_code        INT,
-    FOREIGN KEY (country_code) REFERENCES DIM_Country(country_code)
-);
-
-CREATE TABLE DIM_Sales_Representative (
-    sales_representative_code   INT PRIMARY KEY,
-    first_name                  VARCHAR(45),
-    last_name                   VARCHAR(45),
-    position_en                 VARCHAR(100),
-    work_phone                  VARCHAR(45),
-    extension                   INT,
-    fax                         VARCHAR(45),
-    email                       VARCHAR(100),
-    date_hired                  DATE,
-    sales_office                INT,
-    manager                     INT,
-    FOREIGN KEY (sales_office) REFERENCES DIM_Sales_Office(sales_office_code),
-    FOREIGN KEY (manager) REFERENCES DIM_Sales_Representative(sales_representative_code)
-);
-
-CREATE TABLE DIM_GoStaff_Sales_Staff (
-    sales_staff_code    INT PRIMARY KEY,
-    first_name          VARCHAR(45),
-    last_name           VARCHAR(45),
-    position_en         VARCHAR(100),
-    extension           INT,
-    date_hired          DATE,
-    sales_branch        INT
+CREATE TABLE DIM_Date(
+    DATE_ID INT PRIMARY KEY,
+    DATUM DATE,
+    MONTH INT,
+    FOREIGN KEY (MONTH) REFERENCES DIM_Month(MONTH_ID)
 );
