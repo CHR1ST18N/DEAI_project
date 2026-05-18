@@ -121,3 +121,20 @@
 2026-05-18 13-47-11 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_inventory_level|SUCCESS
 2026-05-18 13-47-11 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_product_forecast|SUCCESS
 2026-05-18 13-47-11 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_sales_target|SUCCESS
+2026-05-18 15-10-09 | DWH |  INFO | DWH|START POPULATION|Data/sdm-dwh/dwhdb.db
+2026-05-18 15-10-09 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_customer_segment|SUCCESS
+2026-05-18 15-10-09 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_Month|SUCCESS
+2026-05-18 15-10-09 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_country|SUCCESS
+2026-05-18 15-10-09 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_Date|SUCCESS
+2026-05-18 15-10-09 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_sales_branch|SUCCESS
+2026-05-18 15-10-09 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_product|SUCCESS
+2026-05-18 15-10-09 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_customer_headquarters|SUCCESS
+2026-05-18 15-10-09 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_sales_staff|SUCCESS
+2026-05-18 15-10-09 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_customer|SUCCESS
+2026-05-18 15-10-09 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_retailer_site|SUCCESS
+2026-05-18 15-10-09 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_sales_demographic|SUCCESS
+2026-05-18 15-10-09 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_order_header|SUCCESS
+2026-05-18 15-10-09 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_order_details|SUCCESS
+2026-05-18 15-10-09 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_return_details|SUCCESS
+2026-05-18 15-10-09 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_product_snapshot|SUCCESS
+2026-05-18 15-10-09 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_sales_target|SUCCESS
