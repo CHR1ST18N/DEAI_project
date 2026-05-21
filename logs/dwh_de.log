@@ -297,3 +297,167 @@
 2026-05-19 14-34-42 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_return_details|SUCCESS
 2026-05-19 14-34-42 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_product_snapshot|SUCCESS
 2026-05-19 14-34-42 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_sales_target|SUCCESS
+2026-05-21 13-29-25 | DWH |  INFO | DWH|START POPULATION|Data/sdm-dwh/dwhdb.db
+2026-05-21 13-29-25 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_customer_segment|SUCCESS
+2026-05-21 13-29-25 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_Month|SUCCESS
+2026-05-21 13-29-25 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_country|SUCCESS
+2026-05-21 13-29-25 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_Date|SUCCESS
+2026-05-21 13-29-25 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_sales_branch|SUCCESS
+2026-05-21 13-29-25 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_product|SUCCESS
+2026-05-21 13-29-25 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_customer_headquarters|SUCCESS
+2026-05-21 13-29-25 | DWH |  ERROR | DWH|ERROR|Data/sdm-dwh/dwhdb.db|DIM_sales_staff|Error binding parameter 8: type 'Timestamp' is not supported
+2026-05-21 13-30-03 | DWH |  INFO | DWH|START POPULATION|Data/sdm-dwh/dwhdb.db
+2026-05-21 13-30-03 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_customer_segment|SUCCESS
+2026-05-21 13-30-03 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_Month|SUCCESS
+2026-05-21 13-30-03 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_country|SUCCESS
+2026-05-21 13-30-03 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_Date|SUCCESS
+2026-05-21 13-30-03 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_sales_branch|SUCCESS
+2026-05-21 13-30-03 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_product|SUCCESS
+2026-05-21 13-30-03 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_customer_headquarters|SUCCESS
+2026-05-21 13-30-03 | DWH |  ERROR | DWH|ERROR|Data/sdm-dwh/dwhdb.db|DIM_sales_staff|Error binding parameter 8: type 'Timestamp' is not supported
+2026-05-21 13-30-16 | DWH |  INFO | DWH|START POPULATION|Data/sdm-dwh/dwhdb.db
+2026-05-21 13-30-16 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_customer_segment|SUCCESS
+2026-05-21 13-30-16 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_Month|SUCCESS
+2026-05-21 13-30-16 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_country|SUCCESS
+2026-05-21 13-30-16 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_Date|SUCCESS
+2026-05-21 13-30-16 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_sales_branch|SUCCESS
+2026-05-21 13-30-16 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_product|SUCCESS
+2026-05-21 13-30-16 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_customer_headquarters|SUCCESS
+2026-05-21 13-30-16 | DWH |  ERROR | DWH|ERROR|Data/sdm-dwh/dwhdb.db|DIM_sales_staff|Error binding parameter 8: type 'Timestamp' is not supported
+2026-05-21 13-31-45 | DWH |  INFO | DWH|START POPULATION|Data/sdm-dwh/dwhdb.db
+2026-05-21 13-31-45 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_customer_segment|SUCCESS
+2026-05-21 13-31-45 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_Month|SUCCESS
+2026-05-21 13-31-45 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_country|SUCCESS
+2026-05-21 13-31-45 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_Date|SUCCESS
+2026-05-21 13-31-45 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_sales_branch|SUCCESS
+2026-05-21 13-31-45 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_product|SUCCESS
+2026-05-21 13-31-45 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_customer_headquarters|SUCCESS
+2026-05-21 13-31-45 | DWH |  ERROR | DWH|ERROR|Data/sdm-dwh/dwhdb.db|DIM_sales_staff|Error binding parameter 8: type 'Timestamp' is not supported
+2026-05-21 13-32-01 | DWH |  INFO | DWH|START POPULATION|Data/sdm-dwh/dwhdb.db
+2026-05-21 13-32-01 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_customer_segment|SUCCESS
+2026-05-21 13-32-01 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_Month|SUCCESS
+2026-05-21 13-32-01 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_country|SUCCESS
+2026-05-21 13-32-01 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_Date|SUCCESS
+2026-05-21 13-32-01 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_sales_branch|SUCCESS
+2026-05-21 13-32-01 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_product|SUCCESS
+2026-05-21 13-32-01 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_customer_headquarters|SUCCESS
+2026-05-21 13-32-01 | DWH |  ERROR | DWH|ERROR|Data/sdm-dwh/dwhdb.db|DIM_sales_staff|Error binding parameter 8: type 'Timestamp' is not supported
+2026-05-21 13-34-02 | DWH |  INFO | DWH|START POPULATION|Data/sdm-dwh/dwhdb.db
+2026-05-21 13-34-02 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_customer_segment|SUCCESS
+2026-05-21 13-34-02 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_Month|SUCCESS
+2026-05-21 13-34-02 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_country|SUCCESS
+2026-05-21 13-34-02 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_Date|SUCCESS
+2026-05-21 13-34-02 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_sales_branch|SUCCESS
+2026-05-21 13-34-02 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_product|SUCCESS
+2026-05-21 13-34-02 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_customer_headquarters|SUCCESS
+2026-05-21 13-34-02 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_sales_staff|SUCCESS
+2026-05-21 13-34-02 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_customer|SUCCESS
+2026-05-21 13-34-02 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_retailer_site|SUCCESS
+2026-05-21 13-34-02 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_sales_demographic|SUCCESS
+2026-05-21 13-34-02 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_order_header|SUCCESS
+2026-05-21 13-34-02 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_order_details|SUCCESS
+2026-05-21 13-34-02 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_return_details|SUCCESS
+2026-05-21 13-34-02 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_product_snapshot|SUCCESS
+2026-05-21 13-34-02 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_sales_target|SUCCESS
+2026-05-21 13-49-41 | DWH |  INFO | DWH|START POPULATION|Data/sdm-dwh/dwhdb.db
+2026-05-21 13-49-41 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_customer_segment|SUCCESS
+2026-05-21 13-49-41 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_Month|SUCCESS
+2026-05-21 13-49-41 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_country|SUCCESS
+2026-05-21 13-49-41 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_Date|SUCCESS
+2026-05-21 13-49-41 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_sales_branch|SUCCESS
+2026-05-21 13-49-41 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_product|SUCCESS
+2026-05-21 13-49-41 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_customer_headquarters|SUCCESS
+2026-05-21 13-49-41 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_sales_staff|SUCCESS
+2026-05-21 13-49-42 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_customer|SUCCESS
+2026-05-21 13-49-42 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_retailer_site|SUCCESS
+2026-05-21 13-49-42 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_sales_demographic|SUCCESS
+2026-05-21 13-49-42 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_order_header|SUCCESS
+2026-05-21 13-49-42 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_order_details|SUCCESS
+2026-05-21 13-49-42 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_return_details|SUCCESS
+2026-05-21 13-49-42 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_product_snapshot|SUCCESS
+2026-05-21 13-49-42 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_sales_target|SUCCESS
+2026-05-21 13-51-01 | DWH |  INFO | DWH|START POPULATION|Data/sdm-dwh/dwhdb.db
+2026-05-21 13-51-01 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_customer_segment|SUCCESS
+2026-05-21 13-51-01 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_Month|SUCCESS
+2026-05-21 13-51-01 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_country|SUCCESS
+2026-05-21 13-51-01 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_Date|SUCCESS
+2026-05-21 13-51-01 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_sales_branch|SUCCESS
+2026-05-21 13-51-01 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_product|SUCCESS
+2026-05-21 13-51-01 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_customer_headquarters|SUCCESS
+2026-05-21 13-51-01 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_sales_staff|SUCCESS
+2026-05-21 13-51-01 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_customer|SUCCESS
+2026-05-21 13-51-01 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_retailer_site|SUCCESS
+2026-05-21 13-51-01 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_sales_demographic|SUCCESS
+2026-05-21 13-51-01 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_order_header|SUCCESS
+2026-05-21 13-51-01 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_order_details|SUCCESS
+2026-05-21 13-51-01 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_return_details|SUCCESS
+2026-05-21 13-51-01 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_product_snapshot|SUCCESS
+2026-05-21 13-51-01 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_sales_target|SUCCESS
+2026-05-21 13-51-14 | DWH |  INFO | DWH|START POPULATION|Data/sdm-dwh/dwhdb.db
+2026-05-21 13-51-14 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_customer_segment|SUCCESS
+2026-05-21 13-51-14 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_Month|SUCCESS
+2026-05-21 13-51-14 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_country|SUCCESS
+2026-05-21 13-51-14 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_Date|SUCCESS
+2026-05-21 13-51-14 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_sales_branch|SUCCESS
+2026-05-21 13-51-14 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_product|SUCCESS
+2026-05-21 13-51-14 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_customer_headquarters|SUCCESS
+2026-05-21 13-51-14 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_sales_staff|SUCCESS
+2026-05-21 13-51-14 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_customer|SUCCESS
+2026-05-21 13-51-14 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_retailer_site|SUCCESS
+2026-05-21 13-51-14 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_sales_demographic|SUCCESS
+2026-05-21 13-51-14 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_order_header|SUCCESS
+2026-05-21 13-51-15 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_order_details|SUCCESS
+2026-05-21 13-51-15 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_return_details|SUCCESS
+2026-05-21 13-51-15 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_product_snapshot|SUCCESS
+2026-05-21 13-51-15 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_sales_target|SUCCESS
+2026-05-21 13-53-11 | DWH |  INFO | DWH|START POPULATION|Data/sdm-dwh/dwhdb.db
+2026-05-21 13-53-11 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_customer_segment|SUCCESS
+2026-05-21 13-53-11 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_Month|SUCCESS
+2026-05-21 13-53-11 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_country|SUCCESS
+2026-05-21 13-53-11 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_Date|SUCCESS
+2026-05-21 13-53-11 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_sales_branch|SUCCESS
+2026-05-21 13-53-11 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_product|SUCCESS
+2026-05-21 13-53-11 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_customer_headquarters|SUCCESS
+2026-05-21 13-53-11 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_sales_staff|SUCCESS
+2026-05-21 13-53-11 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_customer|SUCCESS
+2026-05-21 13-53-11 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_retailer_site|SUCCESS
+2026-05-21 13-53-11 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_sales_demographic|SUCCESS
+2026-05-21 13-53-11 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_order_header|SUCCESS
+2026-05-21 13-53-11 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_order_details|SUCCESS
+2026-05-21 13-53-11 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_return_details|SUCCESS
+2026-05-21 13-53-11 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_product_snapshot|SUCCESS
+2026-05-21 13-53-11 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_sales_target|SUCCESS
+2026-05-21 13-53-53 | DWH |  INFO | DWH|START POPULATION|Data/sdm-dwh/dwhdb.db
+2026-05-21 13-53-53 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_customer_segment|SUCCESS
+2026-05-21 13-53-53 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_Month|SUCCESS
+2026-05-21 13-53-53 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_country|SUCCESS
+2026-05-21 13-53-53 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_Date|SUCCESS
+2026-05-21 13-53-53 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_sales_branch|SUCCESS
+2026-05-21 13-53-53 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_product|SUCCESS
+2026-05-21 13-53-53 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_customer_headquarters|SUCCESS
+2026-05-21 13-53-53 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_sales_staff|SUCCESS
+2026-05-21 13-53-53 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_customer|SUCCESS
+2026-05-21 13-53-53 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_retailer_site|SUCCESS
+2026-05-21 13-53-53 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_sales_demographic|SUCCESS
+2026-05-21 13-53-53 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_order_header|SUCCESS
+2026-05-21 13-53-53 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_order_details|SUCCESS
+2026-05-21 13-53-53 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_return_details|SUCCESS
+2026-05-21 13-53-53 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_product_snapshot|SUCCESS
+2026-05-21 13-53-53 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_sales_target|SUCCESS
+2026-05-21 13-54-22 | DWH |  INFO | DWH|START POPULATION|Data/sdm-dwh/dwhdb.db
+2026-05-21 13-54-22 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_customer_segment|SUCCESS
+2026-05-21 13-54-22 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_Month|SUCCESS
+2026-05-21 13-54-22 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_country|SUCCESS
+2026-05-21 13-54-22 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_Date|SUCCESS
+2026-05-21 13-54-22 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_sales_branch|SUCCESS
+2026-05-21 13-54-22 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_product|SUCCESS
+2026-05-21 13-54-22 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_customer_headquarters|SUCCESS
+2026-05-21 13-54-22 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_sales_staff|SUCCESS
+2026-05-21 13-54-22 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_customer|SUCCESS
+2026-05-21 13-54-22 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|DIM_retailer_site|SUCCESS
+2026-05-21 13-54-22 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_sales_demographic|SUCCESS
+2026-05-21 13-54-22 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_order_header|SUCCESS
+2026-05-21 13-54-22 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_order_details|SUCCESS
+2026-05-21 13-54-22 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_return_details|SUCCESS
+2026-05-21 13-54-22 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_product_snapshot|SUCCESS
+2026-05-21 13-54-22 | DWH |  INFO | DWH|INFO|Data/sdm-dwh/dwhdb.db|FACT_sales_target|SUCCESS
